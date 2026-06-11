@@ -1,10 +1,11 @@
+This project works only for minimserver.
 # **server:**
 1.change /upotserver/settings.json
     must replace:
-        minimserver ip to minimserver_ip
-        public ip to server_ip
-        the service port to port
-    option:
+        minimserver_ip to your own minimserver ip
+        server_ip to your own public ip
+        port to your service port
+    optional:
         account, password: account, password that your foobar2000 need
         friendlyName: the name display on internet
         UDN: the id foobar2000 look for
