@@ -1,4 +1,4 @@
-server:
+# **server:**
 1.change /upotserver/settings.json
     must replace:
         minimserver ip to minimserver_ip
@@ -9,7 +9,7 @@ server:
         friendlyName: the name display on internet
         UDN: the id foobar2000 look for
 
-docker:
+### **docker:**
 1. you may want to change your image name in .env file and your container name in docker-compose.yml
 2. for building docker image, you need a Dockerfile
 docker build -t <image name> . --no-cache 
@@ -17,23 +17,24 @@ docker build -t <image name> . --no-cache
 docker-compose up -d
 
 
-# checking log
+# **client:**
+1.install foo_upnp to your foobar
+2.go to View->UPnp Browser 
+3.right click and click Add remote internet Upnp Server...
+4.type in your public ip to Host and account, password
+
+---
+### checking log
 docker-compose logs --tail=100
-# get in docker container
+### get in docker container
 docker exec -it <container name> /bin/bash
-# remove container
+### remove container
 docker rm <container name>
 #remoce image
 docker rmi <image name>
-# tool might use full
+### tool might use full
 apt-get update
 apt-get install net-tools
 netstat -tulpn | grep :58055
 apt-get install procps
 ps a
-
-client:
-1.install foo_upnp to your foobar
-2.go to View->UPnp Browser 
-3.right click and click Add remote internet Upnp Server...
-4.type in your public ip to Host and account, password
