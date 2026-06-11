@@ -1,0 +1,32 @@
+{
+    "account": "a",
+    "password": "a",
+    "minimserver_ip": "192.168.51.150",
+    "server_ip": "haha.diskstation.me",
+    "port": 58055,
+    "friendlyName": "upot[MIN_NAS]",
+    "manufacturer": "min",
+    "modelName": "upotserver",
+    "UDN": "uuid:471d2676-025c-4922-94da-eb51d9f87af5",
+    "DeviceDescription_path": "/files/DeviceDescription.xml",
+    "ConnectionManager": {
+        "SCPDURL": "/ConnectionManager/service.xml",
+        "controlURL": "/ConnectionManager/control",
+        "eventSubURL": "/ConnectionManager/event"
+    },
+    "ContentDirectory": {
+        "SCPDURL": "/ContentDirectory/service.xml",
+        "controlURL": "/ContentDirectory/control",
+        "eventSubURL": "/ContentDirectory/event"
+    },
+    "Minim_ConnectionManager": {
+        "SCPDURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/Upnp/upnp.org-ConnectionManager-1/service.xml",
+        "controlURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/upnp.org-ConnectionManager-1/control",
+        "eventSubURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/upnp.org-ConnectionManager-1/event"
+    },
+    "Minim_ContentDirectory": {
+        "SCPDURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/Upnp/upnp.org-ContentDirectory-1/service.xml",
+        "controlURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/upnp.org-ContentDirectory-1/control",
+        "eventSubURL": "/3882cad7-1425-451f-a4fc-5aede8dbc7a3/upnp.org-ContentDirectory-1/event"
+    }
+}

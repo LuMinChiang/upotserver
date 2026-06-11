@@ -1,0 +1,22 @@
+server:
+1.change settings.json
+    must replace:
+        minimserver ip to minimserver_ip
+        public ip to server_ip
+        the service port to port
+    option:
+        account, password: account, password that your foobar2000 need
+        friendlyName: the name display on internet
+        UDN: the id foobar2000 look for
+
+2.run ssdp.py first, it will find your minimserver and create DeviceDescription.xml that save to local path(/files)
+python3 ssdp.py
+
+3.run server.py, it start the server
+python3 server.py
+
+client:
+1.install foo_upnp to your foobar
+2.go to View->UPnp Browser 
+3.right click and click Add remote internet Upnp Server...
+4.type in your public ip to Host and account, password

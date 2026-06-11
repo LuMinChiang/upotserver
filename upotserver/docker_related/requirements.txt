@@ -1,0 +1,7 @@
+ssdp 
+ssdpy 
+flask_httpauth
+upnpy
+flask
+requests
+pathlib

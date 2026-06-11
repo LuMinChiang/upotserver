@@ -1,0 +1,20 @@
+# 使用輕量級 Python
+FROM python:3.11-slim
+
+# 設定工作目錄
+WORKDIR /upotserver
+
+# 先複製依賴清單以利用 Docker 快取
+COPY requirements.txt .
+
+# 安裝必要的套件 
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 複製所有檔案（server.py, device.xml, data.json 等）
+# COPY . .
+
+# 開放您的 Python Server 埠號
+EXPOSE 58055
+
+# 啟動指令 (假設您的腳本叫 server.py)
+# CMD ["python", "server.py"]

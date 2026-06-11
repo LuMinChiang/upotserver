@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  upot:
+    build: .
+    container_name: upotserver
+    image: ${MY_IMAGE_1}
+    stdin_open: true
+    tty: true
+    restart: always
+    # 如果你的 MinimServer 在同一台主機，推薦使用 host 模式
+    # 這樣 SSDP 廣播和 IP 存取最不會出錯
+    network_mode: "host" 
+    volumes:
+      # 將設定檔和 XML 掛載出來，之後修改不用重新 build image
+      - ${MY_FILE_PATH}:/upotserver
+    environment:
+    # for logging issues
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: "json-file"
+      options:
+      # don't let the log file grow infinite
+        max-size: "10m"
+        max-file: "3"
+    command: ["sh", "-c", "python3 ssdp.py && python3 server.py"]

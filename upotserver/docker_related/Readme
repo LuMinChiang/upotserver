@@ -1,0 +1,9 @@
+# you may want to change your image name in .env file
+# for building docker image, you need a Dockerfile
+docker build -t <image name> . --no-cache 
+# for running a container, you need a docker-compose.yml
+docker-compose up -d
+# checking log
+docker-compose logs --tail=100
+# get in
+docker exec -it <name> /bin/bash
