@@ -1,14 +1,18 @@
 This project works only for minimserver.
 # **server:**
-1.change /upotserver/settings.json
-    must replace:
-        minimserver_ip to your own minimserver ip
-        server_ip to your own public ip
-        port to your service port
-    optional:
-        account, password: account, password that your foobar2000 need
-        friendlyName: the name display on internet
-        UDN: the id foobar2000 look for
+1. Modify the configuration file at `/upotserver/settings.json`.
+   
+   **Must Replace:**
+   * `minimserver_ip`: Your own Minimserver IP address.
+   * `server_ip`: Your own public IP address.
+   * `port`: Your service port.
+     * *Note: If you change this port, you must also update the `EXPOSE` value in `/upotserver/docker_related/Dockerfile_ver1`.*
+
+   **Optional Fields:**
+   * `account` / `password`: The credentials required by your Foobar2000.
+   * `friendlyName`: The display name that appears on the internet.
+   * `UDN`: The unique ID that Foobar2000 looks for.
+        
 
 ### **docker:**
 1. you may want to change your image name in .env file and your container name in docker-compose.yml
